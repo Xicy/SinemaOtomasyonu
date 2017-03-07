@@ -1,4 +1,4 @@
-﻿namespace SinemaOtomasyonu.Models
+﻿namespace CinemaAutomation.Models
 {
     public class Price
     {
@@ -24,7 +24,7 @@
         /// </summary>
         /// <param name="_3d">Eğer müşteri gözlük istiyorsa değeri true girin yok boş bırakın</param>
         /// <returns></returns>
-        public float getStudentPrice(bool _3d = false)
+        public float GetStudentPrice(bool _3d = false)
         {
             if (_3d)
             {
@@ -41,7 +41,7 @@
         /// </summary>
         /// <param name="_3d">Eğer müşteri gözlük istiyorsa değeri true girin yok boş bırakın</param>
         /// <returns></returns>
-        public float getPersonPrice(bool _3d = false)
+        public float GetPersonPrice(bool _3d = false)
         {
             if (_3d)
             {
@@ -57,7 +57,7 @@
         /// Öğrenci Fiyatını güncelle
         /// </summary>
         /// <param name="price">anlık öğrenci fiyatı</param>
-        public void setStudentPrice(float price)
+        public void SetStudentPrice(float price)
         {
             if (price > 0)
             {
@@ -69,7 +69,7 @@
         /// Tam fiyatını güncelle
         /// </summary>
         /// <param name="price">anlık tam fiyatı</param>
-        public void setPersonPrice(float price)
+        public void SetPersonPrice(float price)
         {
             if (price > 0)
                 per_Price = price;
@@ -79,7 +79,7 @@
         /// Gözlük fiyatını güncelle
         /// </summary>
         /// <param name="price">anlık gözlük fiyatı</param>
-        public void setGlassPrice(float price)
+        public void SetGlassPrice(float price)
         {
             if (price > 0)
                 glass_Price = price;
