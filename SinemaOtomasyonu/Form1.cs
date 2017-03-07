@@ -13,10 +13,13 @@ namespace SinemaOtomasyonu
 {
     public partial class Form1 : Form
     {
+        private Salon salon;
+
         public Form1()
         {
             InitializeComponent();
-          
+
+            salon = new Salon();
         }
     }
 }
