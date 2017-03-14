@@ -46,8 +46,11 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Film.cs" />
     <Compile Include="Models\Price.cs" />
     <Compile Include="Models\Hall.cs" />
+    <Compile Include="Models\Seans.cs" />
+    <Compile Include="Models\Seat.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Main.resx">

@@ -28,20 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.SeatsListPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.FilmComboBox = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // Form1
+            // SeatsListPanel
+            // 
+            this.SeatsListPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SeatsListPanel.AutoScroll = true;
+            this.SeatsListPanel.Location = new System.Drawing.Point(0, 68);
+            this.SeatsListPanel.Name = "SeatsListPanel";
+            this.SeatsListPanel.Size = new System.Drawing.Size(1113, 416);
+            this.SeatsListPanel.TabIndex = 0;
+            // 
+            // FilmComboBox
+            // 
+            this.FilmComboBox.FormattingEnabled = true;
+            this.FilmComboBox.Location = new System.Drawing.Point(12, 12);
+            this.FilmComboBox.Name = "FilmComboBox";
+            this.FilmComboBox.Size = new System.Drawing.Size(309, 32);
+            this.FilmComboBox.TabIndex = 1;
+            this.FilmComboBox.SelectedIndexChanged += new System.EventHandler(this.FilmComboBox_SelectedIndexChanged);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(396, 12);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(344, 32);
+            this.comboBox1.TabIndex = 2;
+            // 
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 236);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(1112, 484);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.FilmComboBox);
+            this.Controls.Add(this.SeatsListPanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "Main";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.FlowLayoutPanel SeatsListPanel;
+        private System.Windows.Forms.ComboBox FilmComboBox;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
