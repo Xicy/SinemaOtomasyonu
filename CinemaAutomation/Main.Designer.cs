@@ -31,6 +31,7 @@
             this.SeatsListPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.FilmComboBox = new System.Windows.Forms.ComboBox();
             this.SeanslarComboBox = new System.Windows.Forms.ComboBox();
+            this.AddFilmButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SeatsListPanel
@@ -47,7 +48,7 @@
             // FilmComboBox
             // 
             this.FilmComboBox.FormattingEnabled = true;
-            this.FilmComboBox.Location = new System.Drawing.Point(12, 12);
+            this.FilmComboBox.Location = new System.Drawing.Point(81, 12);
             this.FilmComboBox.Name = "FilmComboBox";
             this.FilmComboBox.Size = new System.Drawing.Size(309, 32);
             this.FilmComboBox.TabIndex = 1;
@@ -62,11 +63,22 @@
             this.SeanslarComboBox.TabIndex = 2;
             this.SeanslarComboBox.SelectedIndexChanged += new System.EventHandler(this.SeanslarComboBox_SelectedIndexChanged);
             // 
+            // AddFilmButton
+            // 
+            this.AddFilmButton.Location = new System.Drawing.Point(12, 12);
+            this.AddFilmButton.Name = "AddFilmButton";
+            this.AddFilmButton.Size = new System.Drawing.Size(63, 32);
+            this.AddFilmButton.TabIndex = 3;
+            this.AddFilmButton.Text = "+";
+            this.AddFilmButton.UseVisualStyleBackColor = true;
+            this.AddFilmButton.Click += new System.EventHandler(this.AddFilmButton_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1085, 484);
+            this.Controls.Add(this.AddFilmButton);
             this.Controls.Add(this.SeanslarComboBox);
             this.Controls.Add(this.FilmComboBox);
             this.Controls.Add(this.SeatsListPanel);
@@ -82,6 +94,7 @@
         private System.Windows.Forms.FlowLayoutPanel SeatsListPanel;
         private System.Windows.Forms.ComboBox FilmComboBox;
         private System.Windows.Forms.ComboBox SeanslarComboBox;
+        private System.Windows.Forms.Button AddFilmButton;
     }
 }
 

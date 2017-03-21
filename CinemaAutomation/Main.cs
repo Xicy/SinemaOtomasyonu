@@ -1,41 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using CinemaAutomation.Models;
+using CinemaAutomation.Controllers;
+using CinemaAutomation.Views;
 
 namespace CinemaAutomation
 {
     public partial class Main : Form
     {
-        private List<Film> Films;
-        private List<Seans> Seanslar;
-        private List<Hall> Halls;
 
         public Main()
         {
             InitializeComponent();
+            
 
-            Films = new List<Film>();
-            Seanslar = new List<Seans>();
-            Halls = new List<Hall>();
+            Film f = Global.AddFilm("Logan");
+            Global.AddSeans(f, "1", DateTime.Parse("20/03/2017 12:00:00"));
+            Global.AddSeans(f, "1", DateTime.Parse("20/03/2017 14:00:00"));
 
-            Halls.Add(new Hall("1"));
-            Halls.Add(new Hall("1"));
-
-            Film film = new Film("Logan");
-
-            Seans seans = new Seans(DateTime.Parse("20/03/2017 12:00:00"), Halls[0]);
-            Seans seans2 = new Seans(DateTime.Parse("20/03/2017 14:00:00"), Halls[1]);
-            Seanslar.Add(seans2);
-            film.AddSeans(seans2);
-            Seanslar.Add(seans);
-            film.AddSeans(seans);
-
-            Films.Add(film);
-
-            foreach (Film filmR in Films)
+            foreach (Film filmR in Global.Films)
             {
                 FilmComboBox.Items.Add(filmR.GetName());
             }
@@ -84,7 +68,7 @@ namespace CinemaAutomation
         {
             ComboBox cb = (ComboBox)sender;
             Film selectedFilm = null;
-            foreach (Film variable in Films)
+            foreach (Film variable in Global.Films)
             {
                 if (variable.GetName() == cb.SelectedItem.ToString())
                 {
@@ -102,8 +86,8 @@ namespace CinemaAutomation
 
         private void SeanslarComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ComboBox cb = (ComboBox) sender;
-            foreach (Seans seans in Seanslar)
+            ComboBox cb = (ComboBox)sender;
+            foreach (Seans seans in Global.Seanslar)
             {
                 if (cb.SelectedItem.ToString() ==
                     seans.GetHall().GetHallName() + " - " + seans.GetStartTime().ToString("HH:mm"))
@@ -111,6 +95,18 @@ namespace CinemaAutomation
                     ShowSeats(seans);
                     break;
                 }
+            }
+        }
+
+        private void AddFilmButton_Click(object sender, EventArgs e)
+        {
+            AddFilm addFilm = new AddFilm();
+            addFilm.ShowDialog();
+            FilmComboBox.Items.Clear();
+
+            foreach (Film filmR in Global.Films)
+            {
+                FilmComboBox.Items.Add(filmR.GetName());
             }
         }
     }
