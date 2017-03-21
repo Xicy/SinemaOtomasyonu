@@ -36,5 +36,10 @@ namespace CinemaAutomation.Models
         {
             seanslar.Remove(seans);
         }
+
+        public List<Seans> GetSeanses()
+        {
+            return seanslar;
+        }
     }
 }
