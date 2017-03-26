@@ -19,6 +19,9 @@ namespace CinemaAutomation.Controllers
 
         public static void RemoveFilm(Film film)
         {
+
+
+
             Films.Remove(film);
         }
 
