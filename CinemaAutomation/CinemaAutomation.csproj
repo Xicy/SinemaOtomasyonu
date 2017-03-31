@@ -62,11 +62,20 @@
     <Compile Include="Views\AddFilm.Designer.cs">
       <DependentUpon>AddFilm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\SeansAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SeansAdd.Designer.cs">
+      <DependentUpon>SeansAdd.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AddFilm.resx">
       <DependentUpon>AddFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SeansAdd.resx">
+      <DependentUpon>SeansAdd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

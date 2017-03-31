@@ -10,6 +10,8 @@ namespace CinemaAutomation.Controllers
         public static List<Seans> Seanslar = new List<Seans>();
         public static List<Hall> Halls = new List<Hall>();
 
+        public static Film selectedFilm;
+
         public static Film AddFilm(string name)
         {
             Film f = new Film(name);

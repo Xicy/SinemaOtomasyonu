@@ -32,6 +32,7 @@
             this.FilmComboBox = new System.Windows.Forms.ComboBox();
             this.SeanslarComboBox = new System.Windows.Forms.ComboBox();
             this.AddFilmButton = new System.Windows.Forms.Button();
+            this.seansEkleButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SeatsListPanel
@@ -57,7 +58,7 @@
             // SeanslarComboBox
             // 
             this.SeanslarComboBox.FormattingEnabled = true;
-            this.SeanslarComboBox.Location = new System.Drawing.Point(396, 12);
+            this.SeanslarComboBox.Location = new System.Drawing.Point(563, 12);
             this.SeanslarComboBox.Name = "SeanslarComboBox";
             this.SeanslarComboBox.Size = new System.Drawing.Size(366, 32);
             this.SeanslarComboBox.TabIndex = 2;
@@ -73,11 +74,23 @@
             this.AddFilmButton.UseVisualStyleBackColor = true;
             this.AddFilmButton.Click += new System.EventHandler(this.AddFilmButton_Click);
             // 
+            // seansEkleButton
+            // 
+            this.seansEkleButton.Enabled = false;
+            this.seansEkleButton.Location = new System.Drawing.Point(397, 12);
+            this.seansEkleButton.Name = "seansEkleButton";
+            this.seansEkleButton.Size = new System.Drawing.Size(160, 32);
+            this.seansEkleButton.TabIndex = 4;
+            this.seansEkleButton.Text = "Seans Ekle";
+            this.seansEkleButton.UseVisualStyleBackColor = true;
+            this.seansEkleButton.Click += new System.EventHandler(this.seansEkleButton_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1085, 484);
+            this.Controls.Add(this.seansEkleButton);
             this.Controls.Add(this.AddFilmButton);
             this.Controls.Add(this.SeanslarComboBox);
             this.Controls.Add(this.FilmComboBox);
@@ -95,6 +108,7 @@
         private System.Windows.Forms.ComboBox FilmComboBox;
         private System.Windows.Forms.ComboBox SeanslarComboBox;
         private System.Windows.Forms.Button AddFilmButton;
+        private System.Windows.Forms.Button seansEkleButton;
     }
 }
 

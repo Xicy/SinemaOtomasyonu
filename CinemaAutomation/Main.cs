@@ -77,6 +77,9 @@ namespace CinemaAutomation
                 }
             }
 
+            seansEkleButton.Enabled = true;
+            seansEkleButton.Tag = selectedFilm;
+
             SeanslarComboBox.Items.Clear();
             foreach (Seans seans in selectedFilm.GetSeanses())
             {
@@ -107,6 +110,22 @@ namespace CinemaAutomation
             foreach (Film filmR in Global.Films)
             {
                 FilmComboBox.Items.Add(filmR.GetName());
+            }
+        }
+
+        private void seansEkleButton_Click(object sender, EventArgs e)
+        {
+            Button seansButon = (Button) sender;
+            Film selectedFilm = (Film)seansButon.Tag;
+            Global.selectedFilm = selectedFilm;
+
+            SeansAdd seansaddForm = new SeansAdd();
+            seansaddForm.ShowDialog();
+
+            SeanslarComboBox.Items.Clear();
+            foreach (Seans seans in selectedFilm.GetSeanses())
+            {
+                SeanslarComboBox.Items.Add(seans.GetHall().GetHallName() + " - " + seans.GetStartTime().ToString("HH:mm"));
             }
         }
     }
